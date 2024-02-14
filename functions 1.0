@@ -22,3 +22,6 @@ void showprompt(void)
 {
     printf("What is thy bidding?\n");
 }
+
+/* Why our main function has 'return 0' and second function showprompt does not? The reason is that main function is int type, so it 
+   returns a value. On the other hand, showprompt is void type, it does not return something*/
