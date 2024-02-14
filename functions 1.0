@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+// functions that do not func:)
+void showprompt(void);
+
+int main(void)
+{
+    char input[60];
+
+    do
+    {
+        showprompt();
+        gets(input);
+        puts("Someday I must implement that function");
+    }
+    while(strcasecmp("quit", input));
+    printf("Oh! Apparently I did!");
+    return 0;
+}
+
+void showprompt(void)
+{
+    printf("What is thy bidding?\n");
+}
