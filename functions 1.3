@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void separator(void);
+
+int main(void)
+{
+    srand((unsigned)time(NULL));
+
+    puts("There are today's secret number values:");
+    separator();
+    separator();
+    separator();
+}
+
+void separator(void)
+{
+    int x;
+    long int r;
+    for(x = 0; x < 10; x++)
+    {
+        putchar('*');
+    }
+
+    putchar('\n');
+
+    r = rand();
+    printf("%ld\n", r);
+    
+}
