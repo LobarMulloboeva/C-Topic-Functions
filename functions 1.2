@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+int linelen;
+char input[100];
+
+void display(void);
+void dashes(void);
+
+int main(void)
+{   
+    display();
+    return 0;
+}
+
+void display(void)
+{
+    puts("Enter a line of text:");
+    gets(input);
+    putchar('\n');
+    linelen = strlen(input);
+    puts("Here is the line you entered:");
+    dashes();
+    puts(input);
+    dashes();
+}
+
+void dashes(void)
+{
+    int x;
+    for(x = 0; x < linelen; x++)
+    {
+        putchar('-');
+    }
+    putchar('\n');
+}
