@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void separator(void);
+
+int main(void)
+{
+    long int x;
+    srand((unsigned)time(NULL));
+
+    puts("There are today's secret number values:");
+    separator();
+    x = rand();
+    printf("%d\n", x);
+    separator();
+    x = rand();
+    printf("%d\n", x);
+    separator();
+    x = rand();
+    printf("%d\n", x);
+}
+
+void separator(void)
+{
+    int x;
+    for(x = 0; x < 10; x++)
+    {
+        putchar('*');
+    }
+    putchar('\n');
+}
+//Two variables are named 'x'. This works because each variable lives in it's own function.
