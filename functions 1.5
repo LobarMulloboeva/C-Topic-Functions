@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+float baby(float food);
+float output, input;
+
+int main(void)
+{
+    printf("Enter quantity you plan on feeding baby: ");
+    scanf("%f", &input);
+    output = baby(input);
+    printf("According to the computer, baby will produce %.2f material as output\n", output);
+
+    return(0);
+}
+
+float baby(float food)
+{
+    float poop = 1.127 * food;
+    return(poop);
+}
