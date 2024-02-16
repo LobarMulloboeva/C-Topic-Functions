@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int input;
+int r;
+int sum = 0;
+void horizontal(void);
+void random_dice(void);
+
+int main(void)
+{
+    puts("ROLL'EM!");
+    puts("How many dice would you like to roll (1  to 12)? ");
+    scanf("%d", &input);
+    printf("Rolling %d...\n", input);
+    puts("Here they come!");
+    horizontal();
+    random_dice();
+    horizontal();
+    printf("Sum: %d\n", sum);
+    return 0;
+}
+
+void horizontal(void)
+{
+    int x,i;
+    for(x = 0; x < input; x++)
+    {
+        printf("+---");
+    }
+    printf("+\n");
+}
+
+void random_dice(void)
+{   
+    int i, f;
+    srand((unsigned)time(NULL));
+
+    for(i = 0; i < input; i++)
+    {
+        r = rand() % 6 + 1;
+        printf("| %d ", r);
+        sum = sum + r;
+    }
+
+    putchar('|');
+    putchar('\n');
+}
